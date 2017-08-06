@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -37,6 +38,7 @@ namespace ZillowAPIDemo.Models
 
         public string longitude { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:$#.##}")]
         public string zestimateAmount { get; set; }
 
         public string zestimateUpdateDate { get; set; }

@@ -1,0 +1,132 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Zillow Searc Result";
+    @model ZillowAPIDemo.Models.SearchResult
+}
+
+<table class="table">
+    <tr class="row">
+        <th style="text-align:center" colspan="2">Zillow API Search Results</th>
+    </tr>
+    <tr class="row">
+        <th>Zillow Field</th>
+        <th>Value</th>
+    </tr>
+    <tr class="row">
+        <td>Request Street Address:</td>
+        <td>@Html.DisplayTextFor(m => m.requestAddress)</td>
+    </tr>
+    <tr class="row">
+        <td>Request CityStateZip:</td>
+        <td>@Html.DisplayTextFor(m => m.requestCityStateZip)</td>
+    </tr>
+    <tr class="row">
+        <td>Return Code:</td>
+        <td>@Html.DisplayTextFor(m => m.returnCode)</td>
+    </tr>
+    <tr class="row">
+        <td>Return Message:</td>
+        <td>@Html.DisplayTextFor(m => m.returnMessgae)</td>
+    </tr>
+    <tr class="row">
+        <td>zpid:</td>
+        <td>@Html.DisplayTextFor(m => m.zpid)</td>
+    </tr>
+    <tr class="row">
+        <td>Home details page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkHomeDetails)" target="_blank">@Html.DisplayTextFor(m => m.linkHomeDetails)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Chart data page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkGraphs)" target="_blank">@Html.DisplayTextFor(m => m.linkGraphs)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Map this home page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkMap)" target="_blank">@Html.DisplayTextFor(m => m.linkMap)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Similar sales page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkComparable)" target="_blank">@Html.DisplayTextFor(m => m.linkComparable)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Street Address:</td>
+        <td>@Html.DisplayTextFor(m => m.StreetAddress)</td>
+    </tr>
+    <tr class="row">
+        <td>City:</td>
+        <td>@Html.DisplayTextFor(m => m.City)</td>
+    </tr>
+    <tr class="row">
+        <td>State:</td>
+        <td>@Html.DisplayTextFor(m => m.State)</td>
+    </tr>
+    <tr class="row">
+        <td>Zip Code:</td>
+        <td>@Html.DisplayTextFor(m => m.Zipcode)</td>
+    </tr>
+    <tr class="row">
+        <td>Latitude:</td>
+        <td>@Html.DisplayTextFor(m => m.latitude)</td>
+    </tr>
+    <tr class="row">
+        <td>Longitude:</td>
+        <td>@Html.DisplayTextFor(m => m.longitude)</td>
+    </tr>
+    <tr class="row">
+        <td>Zestimate (in $):</td>
+        <td>@Html.DisplayTextFor(m => m.zestimateAmount)</td>
+    </tr>
+    <tr class="row">
+        <td>Last updated date:</td>
+        <td>@Html.DisplayTextFor(m => m.zestimateUpdateDate)</td>
+    </tr>
+    <tr class="row">
+        <td>30-day change (in $):</td>
+        <td>@Html.DisplayTextFor(m => m.zestimate30daysChange)</td>
+    </tr>
+    <tr class="row">
+        <td>Valuation range (high) (in $):</td>
+        <td>@Html.DisplayTextFor(m => m.zestimateHigh)</td>
+    </tr>
+    <tr class="row">
+        <td>Valuation range (low) (in $):</td>
+        <td>@Html.DisplayTextFor(m => m.zestimateLow)</td>
+    </tr>
+    <tr class="row">
+        <td>Zillow Home Value Index:</td>
+        <td>@Html.DisplayTextFor(m => m.zillowIndex)</td>
+    </tr>
+    <tr class="row">
+        <td>Link to Region overview Page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkOverview)" target="_blank">@Html.DisplayTextFor(m => m.linkOverview)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Link to For Sale by Owner homes page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkForSaleByOwner)" target="_blank">@Html.DisplayTextFor(m => m.linkForSaleByOwner)</a></td>
+    </tr>
+    <tr class="row">
+        <td>Link to for sale homes page:</td>
+        <td><a href="@Html.DisplayTextFor(m => m.linkForSale)" target="_blank">@Html.DisplayTextFor(m => m.linkForSale)</a></td>
+    </tr>
+    <tr class="row">
+        <td>View Raw JSON data:</td>
+        <td>@Html.ActionLink("View Raw JSON Data", "HomeSearchJSON", "Home",  new { address = @Html.DisplayTextFor(m => m.requestAddress), citystatezip = @Html.DisplayTextFor(m => m.requestCityStateZip) }, null)</td>
+    </tr>
+</table>
+       
+          
+               
+            
+           
+     
+
+      
+            
+           
+             
+               
+          
+      
+   

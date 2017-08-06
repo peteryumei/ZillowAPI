@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Error Page";
+    @model ZillowAPIDemo.Models.SearchResult
+}
+
+<table class="table">
+    <tr class="row">
+        <th style="text-align:center" colspan="2">Error occurs during the search</th>
+    </tr>
+   
+    <tr class="row">
+        <td>Error Code:</td>
+        <td>@Html.DisplayTextFor(m => m.returnCode)</td>
+    </tr>
+    <tr class="row">
+        <td>Error Message:</td>
+        <td>@Html.DisplayTextFor(m => m.returnMessgae)</td>
+    </tr>
+  
+   
+</table>

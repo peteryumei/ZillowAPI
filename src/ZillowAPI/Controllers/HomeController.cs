@@ -41,7 +41,7 @@ namespace ZillowAPIDemo.Controllers
         }
 
         [HttpGet]
-        public string HomeSearchJSON()
+        public JsonResult HomeSearchJSON()
         {
             string querystring = Request.QueryString.Value;
            
@@ -49,18 +49,41 @@ namespace ZillowAPIDemo.Controllers
             try
             { 
                 string result = zillowService.HomeSearchJSON(querystring);
-
-                return result;
-                //return Json(result);
+                JObject json = JObject.Parse(result);
+                //return result;
+                return Json(json);
             }
             catch (Exception ex)
             {
                 SearchResult result = new SearchResult();
                 result.returnCode = "-1";
                 result.returnMessgae = "Fatal Error: " + ex.Message;
-                return result.ToString();
+                return Json(result);
             }
             
+        }
+
+        [HttpGet]
+        public JsonResult HomeSearchJSON2()
+        {
+            string querystring = Request.QueryString.Value;
+            IZillowService zillowService = new ZillowService();
+
+            try
+            {
+                SearchResult resultModel = zillowService.HomeSearchJSON2(querystring);
+               
+                return Json(resultModel);
+               
+            }
+            catch (Exception ex)
+            {
+                SearchResult result = new SearchResult();
+                result.returnCode = "-1";
+                result.returnMessgae = "Fatal Error: " + ex.Message;
+                return Json(result);
+            }
+
         }
 
         public IActionResult About()

@@ -10,10 +10,8 @@ namespace ZillowAPIDemo.Service
     {
         SearchResult HomeSearch(HomeAddress address);
 
-        string HomeSearchJSON(HomeAddress address);
-
         string HomeSearchJSON(string address);
 
-        string HomeSearchXML(HomeAddress address);
+        SearchResult HomeSearchJSON2(string address);
     }
 }
