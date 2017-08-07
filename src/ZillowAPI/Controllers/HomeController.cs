@@ -88,7 +88,7 @@ namespace ZillowAPIDemo.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Zillow API Demo";
+            ViewData["Message"] = "Zillow GetSearchResults API";
 
             return View();
         }

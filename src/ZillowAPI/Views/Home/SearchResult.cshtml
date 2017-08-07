@@ -55,6 +55,15 @@
         <td><a href="@Html.DisplayTextFor(m => m.linkComparable)" target="_blank">@Html.DisplayTextFor(m => m.linkComparable)</a></td>
     </tr>
     <tr class="row">
+        <td>View JSON data:</td>
+        <td>@Html.ActionLink("View JSON Data", "HomeSearchJSON2", "Home", new { address = @Html.DisplayTextFor(m => m.requestAddress), citystatezip = @Html.DisplayTextFor(m => m.requestCityStateZip) }, new { target = "_blank" })</td>
+    </tr>
+
+    <tr class="row">
+        <td>View Raw JSON data:</td>
+        <td>@Html.ActionLink("View Raw JSON Data", "HomeSearchJSON", "Home", new { address = @Html.DisplayTextFor(m => m.requestAddress), citystatezip = @Html.DisplayTextFor(m => m.requestCityStateZip) }, new { target = "_blank" })</td>
+    </tr>
+    <tr class="row">
         <td>Request Street Address:</td>
         <td>@Html.DisplayTextFor(m => m.requestAddress)</td>
     </tr>
@@ -113,15 +122,7 @@
         <td><a href="@Html.DisplayTextFor(m => m.linkForSale)" target="_blank">@Html.DisplayTextFor(m => m.linkForSale)</a></td>
     </tr>
   
-    <tr class="row">
-        <td>View JSON data:</td>
-        <td>@Html.ActionLink("View JSON Data", "HomeSearchJSON2", "Home", new { address = @Html.DisplayTextFor(m => m.requestAddress), citystatezip = @Html.DisplayTextFor(m => m.requestCityStateZip) }, new { target="_blank" })</td>
-    </tr>
-
-    <tr class="row">
-        <td>View Raw JSON data:</td>
-        <td>@Html.ActionLink("View Raw JSON Data", "HomeSearchJSON", "Home", new { address = @Html.DisplayTextFor(m => m.requestAddress), citystatezip = @Html.DisplayTextFor(m => m.requestCityStateZip) }, new { target = "_blank" })</td>
-    </tr>
+    
 </table>
        
           
