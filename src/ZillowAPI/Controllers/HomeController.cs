@@ -8,15 +8,24 @@ using ZillowAPIDemo.Service;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using ZillowAPI.Models;
+
 
 namespace ZillowAPIDemo.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IZillowService _zillowService;
+
+        public HomeController(IZillowService zillowService)
+        {
+
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         [HttpPost]
